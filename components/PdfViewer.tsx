@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const PdfViewer: React.FC = () => {
   return (
-    <div className="pdf-container">
+    <div className="pdf-container w-full h-screen flex justify-center items-center">
       <iframe
-        src="/resume.pdf"
-        width="100%"
-        height="100%"
-        style={{ border: "none" }}
+        src="/NT_resume.pdf"
+        className="w-full h-full border-none"
       />
     </div>
   );
