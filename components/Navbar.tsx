@@ -17,9 +17,9 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: false },
-  { name: "About", href: "about", current: false },
+  { name: "Resume", href: "resume", current: false },
   { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "My story", href: "story", current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
                   <FaLinkedin className="h-6 w-6" aria-hidden="true" />
                 </a>
                 <a
-                  href="https://github.com/villi02" 
+                  href="https://github.com/villi02"
                   className="group relative inline-flex items-center justify-center h-10 w-10 rounded-full border border-white text-white bg-black hover:bg-white hover:text-black transition-all duration-300"
                 >
                   <FaGithub className="h-6 w-6" aria-hidden="true" />
