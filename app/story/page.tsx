@@ -6,10 +6,6 @@ const Page: React.FC = () => {
   return (
     <React.StrictMode>
       <div>
-        <div className="info-section p-6">
-          <h1>Welcome to My Website</h1>
-          <p>This is a brief introduction.</p>
-        </div>
         <Timeline />
       </div>
     </React.StrictMode>
