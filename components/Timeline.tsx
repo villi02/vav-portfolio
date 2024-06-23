@@ -10,6 +10,21 @@ interface Milestone {
 
 const professionalMilestones: Milestone[] = [
   {
+    date: "2016",
+    title: "Started my first company",
+    description:
+      "Served as the CFO and co-founder of a startup focused on selling iced tea; we sold our products in the school cafeteria. The company was called Fresh Ice Tea",
+  },
+
+  {
+    date: "2020",
+    title: "Started my second company",
+    description:
+      "Served as the CFO and co-founder of a startup with an app centered around sustainability.",
+    image: "/timeline/enkle_grep.png",
+  },
+
+  {
     date: "2021-08-01",
     title: "Started University",
     description:
@@ -18,9 +33,10 @@ const professionalMilestones: Milestone[] = [
   },
   {
     date: "2021-08-01",
-    title: "Key Account Manager at Propulse NTNU",
+    title: "3rd overall at Spaceport America cup",
     description:
-      "Secured funding and partnerships for the student rocketry team.",
+      "Placed 3rd overall in the Spaceport America cup, the world's largest intercollegiate rocket engineering competition. My role was securing funding and partnerships.",
+    image: "/timeline/Propulse.JPG",
   },
   {
     date: "2022-02-01",
@@ -32,14 +48,15 @@ const professionalMilestones: Milestone[] = [
     date: "2022-02-01",
     title: "Software Engineer at Favn Software",
     description:
-      "Implemented scalable data pipeline and enhanced security for applications.",
+      "Started working part-time during the semester and full-time during the summer",
     image: "/timeline/favn_job.jpeg",
   },
   {
     date: "2022-02-01",
     title: "3rd Place at NASA JPL Hackathon",
     description:
-      "Achieved 3rd place in a hackathon hosted by Start NTNU and NASA JPL.",
+      "During my first year, I achieved 3rd place in a hackathon hosted by Start NTNU and NASA JPL. The competition was originally intended for third-year students and above.",
+    image: "/timeline/nasa_hackathon.jpeg",
   },
   {
     date: "2023-07-01",
@@ -51,7 +68,8 @@ const professionalMilestones: Milestone[] = [
   {
     date: "2023-09-01",
     title: "Finalist at HackMIT 2023",
-    description: "Reached the finals in HackMIT 2023 competition.",
+    description: "Traveled to MIT to attend HackMIT 2023.",
+    image: "/timeline/HackMITTeam.jpeg",
   },
   {
     date: "2023-10-01",
@@ -67,10 +85,10 @@ const professionalMilestones: Milestone[] = [
   },
   {
     date: "2024-03-01",
-    title: "Co-founder at A* Consulting",
+    title: "Co-founder and Technical officer at A* Consulting",
     description:
-      "Featured in Adresseavisa, secured first three customers within a month.",
-    image: "https://via.placeholder.com/150",
+      "Featured on the front page of Adresseavisa, secured first three customers within a month.",
+    image: "/timeline/AstarNews.png",
   },
   {
     date: "2024-07-01",
@@ -82,19 +100,72 @@ const professionalMilestones: Milestone[] = [
 
 const funMilestones: Milestone[] = [
   {
-    date: "2020",
-    title: "Started my second company",
+    date: "2018",
+    title: "Hosted High School Prom",
     description:
-      "Served as the CFO and co-founder of a startup with an app centered around sustainability.",
-    image: "/timeline/enkle_grep.png",
+      "Served on the committee to orchestrate the middle school prom, also hosted the event, including having the main speech.",
+    image: "/timeline/hostMiddleSchool.jpg",
   },
+
+  {
+    date: "2019",
+    title: "Learned to do backflips on the ground",
+    description:
+      "Taught myself to do backflips in my backyard. NB I stopped doing this in 2021",
+    image: "/timeline/Backflip.jpg",
+  },
+
+  {
+    date: "2019",
+    title: "Earned my diver’s certificate",
+    description: "Earned my diver’s certificate, Padi Open Water Diver",
+    image: "/timeline/Diving.jpeg",
+  },
+
   {
     date: "2020",
     title: "Top Gear-like race to Nordkapp",
     description: "Raced to Nordkapp with friends in a Top Gear-like adventure.",
     image: "/timeline/north_cape.JPG",
   },
+
+  {
+    date: "2021",
+    title: "Hosted High School Graduation",
+    description: "Co-Hosted the high school graduation ceremony.",
+    image: "/timeline/hostHighSchool.JPG",
+  },
+
+  {
+    date: "2021",
+    title: "Volunteered at UKA 21",
+    description:
+      "Volunteered as a waiter for UKA 21, the largest cultural festival in Norway.",
+    image: "/timeline/uka21.JPG",
+  },
+
+  {
+    date: "2022",
+    title: "Launched a Rocket at Andøya Space Center",
+    description:
+      "Volunteered as a waiter for UKA 21, the largest cultural festival in Norway.",
+    image: "/timeline/andoyaLaunch.jpeg",
+  },
+
+  {
+    date: "2023",
+    title: "Earned my Climbing Certificate",
+    description:
+      "Earned my climbing certificate, allowing me to climb in Norway.",
+    image: "/timeline/climbing.jpeg",
+  },
+
+  
 ];
+
+// make the arrays reverse chronological
+professionalMilestones.reverse();
+funMilestones.reverse();
 
 const Timeline: React.FC = () => {
   const [selectedTimeline, setSelectedTimeline] = useState<
