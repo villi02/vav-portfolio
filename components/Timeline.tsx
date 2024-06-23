@@ -1,5 +1,5 @@
 // components/Timeline.tsx
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface Milestone {
   date: string;
@@ -8,7 +8,7 @@ interface Milestone {
   image?: string;
 }
 
-const milestones: Milestone[] = [
+const professionalMilestones: Milestone[] = [
   {
     date: "2021-08-01",
     title: "Started University",
@@ -33,6 +33,7 @@ const milestones: Milestone[] = [
     title: "Software Engineer at Favn Software",
     description:
       "Implemented scalable data pipeline and enhanced security for applications.",
+    image: "/timeline/favn_job.jpeg",
   },
   {
     date: "2022-02-01",
@@ -62,6 +63,7 @@ const milestones: Milestone[] = [
     title: "2nd Place in ABB Group Hackathon",
     description:
       "Secured 2nd place in a hackathon organized by ABB Group and NTNU IE-faculty.",
+    image: "/timeline/ABB_hackathon.jpeg",
   },
   {
     date: "2024-03-01",
@@ -77,7 +79,27 @@ const milestones: Milestone[] = [
       "Expected completion of M.Sc degrees in Computer Science and Mathematics.",
   },
 ];
+
+const funMilestones: Milestone[] = [
+  {
+    date: "2020",
+    title: "Started my second company",
+    description:
+      "Served as the CFO and co-founder of a startup with an app centered around sustainability.",
+    image: "/timeline/enkle_grep.png",
+  },
+  {
+    date: "2020",
+    title: "Top Gear-like race to Nordkapp",
+    description: "Raced to Nordkapp with friends in a Top Gear-like adventure.",
+    image: "/timeline/north_cape.JPG",
+  },
+];
+
 const Timeline: React.FC = () => {
+  const [selectedTimeline, setSelectedTimeline] = useState<
+    "professional" | "fun"
+  >("professional");
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -111,14 +133,43 @@ const Timeline: React.FC = () => {
         });
       }
     };
-  }, []);
+  }, [selectedTimeline]);
+
+  const milestones =
+    selectedTimeline === "professional"
+      ? professionalMilestones
+      : funMilestones;
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">
         My <strong className="text-purple-500">Timeline</strong>
       </h1>
-      <p className="mb-8">My personal milestones and highlights</p>
+      <p className="mb-8">
+        My professional and personal achievements and highlights
+      </p>
+      <div className="flex justify-center mb-8">
+        <button
+          onClick={() => setSelectedTimeline("professional")}
+          className={`mr-4 px-4 py-2 rounded ${
+            selectedTimeline === "professional"
+              ? "bg-purple-500 text-white"
+              : "bg-gray-200 text-gray-800"
+          }`}
+        >
+          Professional
+        </button>
+        <button
+          onClick={() => setSelectedTimeline("fun")}
+          className={`px-4 py-2 rounded ${
+            selectedTimeline === "fun"
+              ? "bg-purple-500 text-white"
+              : "bg-gray-200 text-gray-800"
+          }`}
+        >
+          Fun
+        </button>
+      </div>
       <div className="relative w-full max-w-4xl mx-auto">
         <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
         {milestones.map((milestone, index) => (
