@@ -17,11 +17,35 @@ const professionalMilestones: Milestone[] = [
   },
 
   {
+    date: "2019",
+    title: "2nd Prize Chinese Bridge Competition in Norway",
+    description:
+      "Competed in the Chinese Bridge Competition in the High School student class. Received 2nd prize for giving a speech in Chinese and performing a Chinese play as my talent portion.",
+    image: "/timeline/chineseBridge.jpeg",
+  },
+
+  {
+    date: "2020",
+    title: "3nd Prize Chinese Bridge Competition in Norway",
+    description:
+      "Competed in the Chinese Bridge Competition in the High School student class. Received 3rd prize for giving a speech in Chinese, the competition was held virtually and without a talent portion due to covid.",
+  },
+
+  {
     date: "2020",
     title: "Started my second company",
     description:
       "Served as the CFO and co-founder of a startup with an app centered around sustainability.",
     image: "/timeline/enkle_grep.png",
+  },
+
+  {
+    date: "2020-2021",
+    title: "Completed CS50x during my last year of high school",
+    description:
+      "Completed the Harvard University CS50x course, an introduction to computer science, during my last year of high school.",
+    image:
+      "/timeline/CS50x.png",
   },
 
   {
@@ -91,7 +115,7 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/AstarNews.png",
   },
   {
-    date: "2024-07-01",
+    date: "2027-07-01",
     title: "Graduation",
     description:
       "Expected completion of M.Sc degrees in Computer Science and Mathematics.",
@@ -159,8 +183,6 @@ const funMilestones: Milestone[] = [
       "Earned my climbing certificate, allowing me to climb in Norway.",
     image: "/timeline/climbing.jpeg",
   },
-
-  
 ];
 
 // make the arrays reverse chronological
