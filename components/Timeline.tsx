@@ -44,8 +44,7 @@ const professionalMilestones: Milestone[] = [
     title: "Completed CS50x during my last year of high school",
     description:
       "Completed the Harvard University CS50x course, an introduction to computer science, during my last year of high school.",
-    image:
-      "/timeline/CS50x.png",
+    image: "/timeline/CS50x.png",
   },
 
   {
@@ -149,7 +148,8 @@ const funMilestones: Milestone[] = [
   {
     date: "2020",
     title: "Top Gear-like race to Nordkapp",
-    description: "Raced to Nordkapp with friends in a Top Gear-like adventure.",
+    description:
+      "Raced to Nordkapp with friends in a Top Gear-like adventure. Where I only used public transportation going from Bergen to Nordkapp.\nLink to news article:\n\n https://www.nrk.no/tromsogfinnmark/kapplop-mellom-bil-og-kollektiv-_-hvem-kom-forst-frem-til-nordkapp_-1.15105257",
     image: "/timeline/north_cape.JPG",
   },
 
@@ -164,7 +164,7 @@ const funMilestones: Milestone[] = [
     date: "2021",
     title: "Volunteered at UKA 21",
     description:
-      "Volunteered as a waiter for UKA 21, the largest cultural festival in Norway.",
+      "As a volunteer waiter and bartender during UKA21's exclusive dinner parties, I served premium food and beverages, contributing to the festival's estimated 6 million NOK in revenue.",
     image: "/timeline/uka21.JPG",
   },
 
@@ -172,7 +172,7 @@ const funMilestones: Milestone[] = [
     date: "2022",
     title: "Launched a Rocket at Andøya Space Center",
     description:
-      "Volunteered as a waiter for UKA 21, the largest cultural festival in Norway.",
+      "As part of the Space Technology II course, I led a team in successfully launching a rocket at Andøya Space Center. In addition to my role as Launch Director, I was also responsible for the rocket's Inertial Measurement Unit (IMU).",
     image: "/timeline/andoyaLaunch.jpeg",
   },
 
