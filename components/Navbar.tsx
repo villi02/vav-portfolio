@@ -33,20 +33,20 @@ const Navbar: React.FC = () => {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <DisclosureButton className="inline-flex items-center justify-center p-3 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </DisclosureButton>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <span className="text-white font-bold text-xl">
+                  <span className="text-white font-bold text-2xl">
                     Vilhjalmur's Website
                   </span>
                 </div>
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "rounded-md px-4 py-3 text-md font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -70,18 +70,18 @@ const Navbar: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-2">
                 <a
                   href="https://linkedin.com/in/vilhjalmur-arnar-vilhjalmsson"
-                  className="group relative inline-flex items-center justify-center h-10 w-10 rounded-full border border-white text-white bg-black hover:bg-white hover:text-black transition-all duration-300"
+                  className="inline-flex items-center justify-center h-12 w-12 rounded-full border border-white text-white bg-black hover:bg-white hover:text-black transition-all duration-300"
                 >
-                  <FaLinkedin className="h-6 w-6" aria-hidden="true" />
+                  <FaLinkedin className="h-8 w-8" aria-hidden="true" />
                 </a>
                 <a
                   href="https://github.com/villi02"
-                  className="group relative inline-flex items-center justify-center h-10 w-10 rounded-full border border-white text-white bg-black hover:bg-white hover:text-black transition-all duration-300"
+                  className="inline-flex items-center justify-center h-12 w-12 rounded-full border border-white text-white bg-black hover:bg-white hover:text-black transition-all duration-300"
                 >
-                  <FaGithub className="h-6 w-6" aria-hidden="true" />
+                  <FaGithub className="h-8 w-8" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
                     item.current
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                    "block rounded-md px-4 py-3 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
