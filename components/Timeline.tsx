@@ -149,7 +149,7 @@ const funMilestones: Milestone[] = [
     date: "2020",
     title: "Top Gear-like race to Nordkapp",
     description:
-      "Raced to Nordkapp with friends in a Top Gear-like adventure. Where I only used public transportation going from Bergen to Nordkapp.\nLink to news article:\n\n https://www.nrk.no/tromsogfinnmark/kapplop-mellom-bil-og-kollektiv-_-hvem-kom-forst-frem-til-nordkapp_-1.15105257",
+      "Raced to Nordkapp with friends in a Top Gear-like adventure. Where I only used public transportation going from Bergen to Nordkapp. Appeared in the newspaper for this adventure.",
     image: "/timeline/north_cape.JPG",
   },
 
