@@ -14,7 +14,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, image, description, githubLink, tags }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-black border border-white flex flex-col">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-black border border-gray-900 flex flex-col">
       <Image
         className="w-full"
         src={image}
