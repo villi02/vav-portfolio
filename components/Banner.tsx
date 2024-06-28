@@ -1,8 +1,12 @@
-"use client";
-import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
-export const Banner: React.FC = () => {
+const LandingPage: React.FC = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:villiarnar1@gmail.com";
+  };
+
   const toRotate = [
     "Machine Learning Engineer",
     "Backend Software Engineer",
@@ -10,11 +14,22 @@ export const Banner: React.FC = () => {
     "Full Stack Developer",
     "AI Research Assistant",
   ];
-  const [isDeleting, setIsDeleting] = useState<boolean>(false);
-  const [loopNum, setLoopNum] = useState<number>(0);
-  const [text, setText] = useState<string>("");
-  const period = 200;
-  const [delta, setDelta] = useState<number>(300 - Math.random() * 100);
+
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const period = 2000;
+
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -39,40 +54,37 @@ export const Banner: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => clearInterval(ticker);
-  }, [text, delta]);
-
-  const headerImg = "he";
-
   return (
-    <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <span className="tagline">
-              {" "}
-              Welcome to the portfolio of Vilhjalmur Arnar Vilhjalmsson
-            </span>
-            <h1>{`I'm Vilhjalmur `}</h1>
-            <h1>
-              <span className="wrap">{text}</span>
-            </h1>
-            <p>
-              Currently pursuing M.Sc in Math&Physics and M.Sc in Computer
-              Science at the Norwegian University of Science and Technology
-              (NTNU)
-            </p>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <img src={headerImg.toString()} alt="Header Image" />
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <div className="flex flex-row items-center justify-between h-screen bg-gradient-to-br from-black via-black to-[#1A001A] p-8 w-full">
+      <div className="flex-1 p-8">
+        <h1 className="text-6xl font-bold text-white mb-4">
+          Hi, I'm Vilhjalmur
+        </h1>
+        <h2 className="text-3xl text-gray-300 mb-4">{text}</h2>
+        <p className="text-xl text-gray-300 mb-4">
+          Currently pursuing M.Sc in Math & Physics and M.Sc in Computer Science
+          at the Norwegian University of Science and Technology (NTNU)
+        </p>
+        <div
+          onClick={handleEmailClick}
+          className="flex items-center text-white text-xl cursor-pointer mb-8 transition-transform transform hover:translate-x-2"
+        >
+          <span className="mr-2">Let's connect!</span>
+          <FaArrowRight className="text-2xl" />
+        </div>
+      </div>
+      <div className="flex-1 flex justify-center items-center p-8">
+        <Image
+          src="/VilhjalmurPortrait.jpg"
+          alt="Vilhjalmur"
+          width={400}
+          height={400}
+          objectFit="cover"
+          className="rounded-lg shadow-lg shadow-gray-800"
+        />
+      </div>
+    </div>
   );
 };
+
+export default LandingPage;
