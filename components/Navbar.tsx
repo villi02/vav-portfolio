@@ -46,9 +46,7 @@ const Navbar: React.FC = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <span className="text-white font-bold text-2xl">
-                    Vilhjalmur's Website
-                  </span>
+                  <span className="text-white font-bold text-2xl">VAV</span>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
