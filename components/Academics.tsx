@@ -26,7 +26,7 @@ const Academics: React.FC<AcademicsProps> = ({
 }) => {
   return (
     <div className="bg-black text-white min-h-screen p-8">
-      <div className="container mx-auto">
+      <div className="bg-black container mx-auto">
         <h1 className="text-3xl font-bold mb-4">
           My <strong className="text-purple-500">Courses</strong>
         </h1>
@@ -36,26 +36,35 @@ const Academics: React.FC<AcademicsProps> = ({
         <p className="mb-8">
           NB : Some courses are not part of my degrees, for various reasons
         </p>
-        <div className="flex flex-col space-y-4">
+        <div className="bg-black flex flex-col space-y-4">
           <Accordion
             className="bg-black border border-gray-900"
             defaultExpanded={true}
           >
             <AccordionSummary
-              expandIcon={<ArrowDropDownIcon sx={{ color: "white" }} />}
+              expandIcon={
+                <ArrowDropDownIcon
+                  sx={{ color: "white" }}
+                  className="bg-black"
+                />
+              }
+              className="bg-black"
             >
-              <Typography className="text-white font-bold text-lg">
+              <Typography className="bg-black text-white font-bold text-lg">
                 Mathematics Courses
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className="bg-black">
               {mathCourses?.map((course) => (
-                <div key={course.code} className="flex justify-between mb-2">
+                <div
+                  key={course.code}
+                  className="bg-black flex justify-between mb-2"
+                >
                   <span className="text-white">{course.title}</span>
                   <div>
                     {course.ghLink && (
                       <a
-                        className="text-purple-400 hover:underline mr-4"
+                        className="bg-black text-purple-400 hover:underline mr-4"
                         href={course.ghLink}
                       >
                         GitHub
@@ -77,16 +86,25 @@ const Academics: React.FC<AcademicsProps> = ({
             defaultExpanded={true}
           >
             <AccordionSummary
-              expandIcon={<ArrowDropDownIcon sx={{ color: "white" }} />}
+              expandIcon={
+                <ArrowDropDownIcon
+                  sx={{ color: "white" }}
+                  className="bg-black"
+                />
+              }
+              className="bg-black"
             >
-              <Typography className="text-white font-bold text-lg">
+              <Typography className="bg-black text-white font-bold text-lg">
                 Physics Courses
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className="bg-black">
               {physicsCourses?.map((course) => (
-                <div key={course.code} className="flex justify-between mb-2">
-                  <span className="text-white">{course.title}</span>
+                <div
+                  key={course.code}
+                  className="bg-black flex justify-between mb-2"
+                >
+                  <span className="bg-black text-white">{course.title}</span>
                   <div>
                     {course.ghLink && (
                       <a
@@ -112,13 +130,18 @@ const Academics: React.FC<AcademicsProps> = ({
             defaultExpanded={true}
           >
             <AccordionSummary
-              expandIcon={<ArrowDropDownIcon sx={{ color: "white" }} />}
+              expandIcon={
+                <ArrowDropDownIcon
+                  sx={{ color: "white" }}
+                  className="bg-black"
+                />
+              }
             >
-              <Typography className="text-white font-bold text-lg">
+              <Typography className="bg-black text-white font-bold text-lg">
                 Computer Science Courses
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className="bg-black">
               {csCourses?.map((course) => (
                 <div key={course.code} className="flex justify-between mb-2">
                   <span className="text-white">{course.title}</span>
