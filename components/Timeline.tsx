@@ -20,7 +20,7 @@ const professionalMilestones: Milestone[] = [
     date: "2019",
     title: "2nd Prize Chinese Bridge Competition in Norway",
     description:
-      "Competed in the Chinese Bridge Competition in the High School student class. Received 2nd prize for giving a speech in Chinese and performing a Chinese play as my talent portion.",
+      "Competed in the Chinese Bridge Competition in the High School student class. Received 2nd prize for giving a speech in Chinese and performing a Chinese play as my talent part.",
     image: "/timeline/chineseBridge.jpeg",
   },
 
@@ -28,7 +28,7 @@ const professionalMilestones: Milestone[] = [
     date: "2020",
     title: "3nd Prize Chinese Bridge Competition in Norway",
     description:
-      "Competed in the Chinese Bridge Competition in the High School student class. Received 3rd prize for giving a speech in Chinese, the competition was held virtually and without a talent portion due to covid.",
+      "Competed in the Chinese Bridge Competition in the High School student class. Received 3rd prize for giving a speech in Chinese, the competition was held virtually and without a talent part due to covid.",
   },
 
   {
@@ -69,24 +69,24 @@ const professionalMilestones: Milestone[] = [
   },
   {
     date: "2022-02-01",
-    title: "Software Engineer at Favn Software",
-    description:
-      "Started working part-time during the semester and full-time during the summer",
-    image: "/timeline/favn_job.jpeg",
-  },
-  {
-    date: "2022-02-01",
     title: "3rd Place at NASA JPL Hackathon",
     description:
       "During my first year, I achieved 3rd place in a hackathon hosted by Start NTNU and NASA JPL. The competition was originally intended for third-year students and above.",
     image: "/timeline/nasa_hackathon.jpeg",
   },
   {
+    date: "2022-02 - 2023-07",
+    title: "Software Engineer at Favn Software",
+    description:
+      "Started working part-time during the semester and full-time during the summer",
+    image: "/timeline/favn_job.jpeg",
+  },
+  {
     date: "2023-07-01",
     title: "AI Research Assistant at NorwAI",
     description:
-      "Contributed to AI research, paper writing, and optimized dataset processing.",
-    image: "https://via.placeholder.com/150",
+      "Contributed to AI research, paper writing, and data analysis. Initially the focus was with large language models, but later shifted to anomaly detection.",
+    image: "/timeline/NorwAI.jpeg",
   },
   {
     date: "2023-09-01",
