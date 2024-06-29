@@ -52,7 +52,6 @@ const professionalMilestones: Milestone[] = [
     title: "Started University",
     description:
       "Began my M.Sc degrees in Computer Science and Mathematics at NTNU.",
-    image: "https://via.placeholder.com/150",
   },
   {
     date: "2021-08-01",
