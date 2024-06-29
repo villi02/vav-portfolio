@@ -1,10 +1,16 @@
-import React from 'react';
 
-const PdfViewer: React.FC = () => {
+import React from "react";
+
+interface PdfViewerProps {
+  resumeLink: string;
+}
+
+const PdfViewer: React.FC<PdfViewerProps> = ({ resumeLink }) => {
   return (
-    <div className="pdf-container w-full h-screen flex justify-center items-center">
+    <div className="pdf-container w-full h-full flex justify-center items-center">
       <iframe
-        src="/NT_resume.pdf"
+        src={resumeLink}
+        style={{ minHeight: "100vh" }}
         className="w-full h-full border-none"
       />
     </div>
