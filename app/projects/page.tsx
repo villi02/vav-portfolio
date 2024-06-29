@@ -29,7 +29,7 @@ const projects = [
       "This project models the trajectories of sea debris based on meteorological data, predicting where debris will float. The main method for numerically approximating the trajectory of the ocean debris is the application of Heun's method. This is one of 3 projects in the course TMA4320 - Introduction to scientific computing and was taken in spring of 2024.",
     githubLink:
       "https://github.com/villi02/TMA4320-Introduksjon-til-vitenskapelige-beregninger-prosjekter/tree/main/Prosjekt3-TekniskFysikk",
-    tags: ["Python", "Numpy", "Matplotlib", "scipy", "xarray", "cartopy"],
+    tags: ["Python", "Numpy", "scipy", "xarray", "cartopy"],
   },
   {
     title: "HackMIT 2023 - Rythm AI",
@@ -37,16 +37,7 @@ const projects = [
     description:
       "AI-driven platform that echoes the nuance of a personal trainer's feedback, making every workout feel even more personalized and rewarding. Either upload your .gpx file manually through the upload button, or sync it with your Strava account and Rhythm will generate the comments for your most recent workouts",
     githubLink: "https://github.com/erikbohne/hackmit-23",
-    tags: [
-      "Python",
-      "Javascript",
-      "OpenAI",
-      "Flask",
-      "TerraAPI",
-      "StravaAPI",
-      "React",
-      "Firebase",
-    ],
+    tags: ["Python", "OpenAI", "Flask", "TerraAPI", "Firebase"],
   },
   {
     title: "Doctor AI",
@@ -58,7 +49,7 @@ const projects = [
   },
   {
     title: "Dividend Diary",
-    image: "/StockAppImg/demopic.png",
+    image: "/projects/dividendapp.png",
     description:
       "An IOS app built for tracking dividend-oriented portfolios. The app is built with Swift for the frontend, firebase for backend, and FinancialModelingPrep API for live stock data. Built as the final project for CS50x, an online course taught by Harvard University",
     githubLink:
@@ -111,7 +102,9 @@ const projects = [
 const ProjectsPage: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-white">My Projects</h1>
+      <h1 className="text-3xl font-bold mb-4">
+        My <strong className="text-purple-500">Projects</strong>
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectCard
