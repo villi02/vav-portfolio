@@ -61,7 +61,7 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/Propulse.JPG",
   },
   {
-    date: "2022-02-01",
+    date: "2022-02 - 2024-06",
     title: "Project Lead at Cogito NTNU",
     description:
       "Led AI projects, including pneumonia detection and time series prediction.",
@@ -82,13 +82,6 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/favn_job.jpeg",
   },
   {
-    date: "2023-07-01",
-    title: "AI Research Assistant at NorwAI",
-    description:
-      "Contributed to AI research, paper writing, and data analysis. Initially the focus was with large language models, but later shifted to anomaly detection.",
-    image: "/timeline/NorwAI.jpeg",
-  },
-  {
     date: "2023-09-01",
     title: "Finalist at HackMIT 2023",
     description: "Traveled to MIT to attend HackMIT 2023.",
@@ -107,7 +100,14 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/ABB_hackathon.jpeg",
   },
   {
-    date: "2024-03-01",
+    date: "2023-07 - present",
+    title: "AI Research Assistant at NorwAI",
+    description:
+      "Contributed to AI research, paper writing, and data analysis. Initially the focus was with large language models, but later shifted to anomaly detection.",
+    image: "/timeline/NorwAI.jpeg",
+  },
+  {
+    date: "2024-03 - present",
     title: "Co-founder and Technical officer at A* Consulting",
     description:
       "Featured on the front page of Adresseavisa, secured first three customers within a month.",

@@ -33,6 +33,9 @@ const Academics: React.FC<AcademicsProps> = ({
         <p className="mb-8">
           Here are the courses I've taken during University
         </p>
+        <p className="mb-8">
+          NB : Some courses are not part of my degrees, for various reasons
+        </p>
         <div className="flex flex-col space-y-4">
           <Accordion
             className="bg-black border border-gray-900"
