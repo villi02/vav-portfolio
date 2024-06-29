@@ -66,6 +66,7 @@ const professionalMilestones: Milestone[] = [
     title: "Project Lead at Cogito NTNU",
     description:
       "Led AI projects, including pneumonia detection and time series prediction.",
+    image: "/timeline/cogito.jpeg",
   },
   {
     date: "2022-02-01",
@@ -150,7 +151,7 @@ const funMilestones: Milestone[] = [
     title: "Top Gear-like race to Nordkapp",
     description:
       "Raced to Nordkapp with friends in a Top Gear-like adventure. Where I only used public transportation going from Bergen to Nordkapp. Appeared in the newspaper for this adventure.",
-    image: "/timeline/north_cape.JPG",
+    image: "/timeline/northCape.png",
   },
 
   {
