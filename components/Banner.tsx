@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-const LandingPage: React.FC = () => {
+const Banner: React.FC = () => {
   const handleEmailClick = () => {
     window.location.href = "mailto:villiarnar1@gmail.com";
   };
@@ -87,4 +87,4 @@ const LandingPage: React.FC = () => {
   );
 };
 
-export default LandingPage;
+export default Banner;

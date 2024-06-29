@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import LandingPage from "@/components/Banner";
+import Banner from "@/components/Banner";
 
 const Page: React.FC = () => {
   return (
     <React.StrictMode>
       <div>
-        <LandingPage />
+        <Banner />
       </div>
     </React.StrictMode>
   );
