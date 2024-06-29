@@ -1,5 +1,4 @@
-// pages/academics.tsx
-
+"use client"
 import React from "react";
 import Academics from "@/components/Academics";
 
