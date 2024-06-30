@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import biophysics from "../assets/img/projects/biophysics_polymer_simulation.png";
-import demostockpic from "../assets/img/StockAppImg/demopic.png";
-import podcastPic from "../assets/img/podcastlogo.jpeg";
-import vlogpic from "../assets/img/projects/vlogpic.png";
-import nordkapppic from "../assets/img/projects/nordkapppic.jpeg";
-import bridgecomp from "../assets/img/projects/Chinese_bridge_logo.jpg";
-import nasaPic from "../assets/img/projects/NASAlogo.png";
-import indmath from "public/projects/industrial_mathematics_transformer.png";
+import { CaruselCard } from "@/components/CaruselCard";
 
 interface Project {
   title: string;
@@ -16,7 +7,7 @@ interface Project {
   imgUrl: string;
 }
 
-const ProjectCarusel: React.FC = () => {
+const ProjectCarousel: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("first");
 
   const projects: Project[] = [
@@ -24,18 +15,18 @@ const ProjectCarusel: React.FC = () => {
       title: "Simulating Polymer Dynamics with Monte Carlo",
       description:
         "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
-      imgUrl: biophysics,
+      imgUrl: "/assets/img/projects/biophysics_polymer_simulation.png",
     },
     {
       title: "Creating a Transformer from Scratch",
       description:
         "A mathematical implementation of a transformer neural network from scratch",
-      imgUrl: indmath,
+      imgUrl: "/assets/img/projects/industrial_mathematics_transformer.png",
     },
     {
       title: "Stock IOS App",
       description: "IOS App oriented around dividend investing",
-      imgUrl: demostockpic,
+      imgUrl: "/assets/img/StockAppImg/demopic.png",
     },
   ];
 
@@ -43,19 +34,19 @@ const ProjectCarusel: React.FC = () => {
     {
       title: "Podcast on Spotify",
       description: "A podcast where I interview people I find interesting",
-      imgUrl: podcastPic,
+      imgUrl: "/other/podcastlogo.jpeg",
     },
     {
       title: "Youtube Vlog for parents",
       description:
         "A vlog I made so that my parents can see what I'm up to in college",
-      imgUrl: vlogpic,
+      imgUrl: "other/vlogpic.png",
     },
     {
       title: "Top Grear-like race",
       description:
         "A race from Bergen to Nordkapp, public transport vs private car",
-      imgUrl: nordkapppic,
+      imgUrl: "/timeline/northCape.png",
     },
   ];
 
@@ -64,18 +55,18 @@ const ProjectCarusel: React.FC = () => {
       title: "2nd - Chinese Bridge Competition Norway",
       description:
         "Consisted of a speech and talent show. My talent show was a play with Philip Alsager.",
-      imgUrl: bridgecomp,
+      imgUrl: "projects/Chinese_bridge_logo.jpg",
     },
     {
       title: "3rd - Chinese Bridge Competition Norway",
       description: "Consisted of a speech only, due to COVID-19",
-      imgUrl: bridgecomp,
+      imgUrl: "/projects/Chinese_bridge_logo.jpg",
     },
     {
       title: "3rd - Hackathon with NASA JPL",
       description:
         "Hackathon hosted by Start NTNU at NTNU. Found ways for the EELS-project at JPL to traverse Enceladus - a moon of Saturn. Used software provided by JPL. (ROS, C++, Python)",
-      imgUrl: nasaPic,
+      imgUrl: "/projects/NASAlogo.png",
     },
   ];
 
@@ -125,25 +116,25 @@ const ProjectCarusel: React.FC = () => {
         <div className="flex flex-wrap justify-center">
           {activeTab === "first" &&
             projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <CaruselCard key={index} {...project} />
             ))}
           {activeTab === "second" &&
             creativeProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <CaruselCard key={index} {...project} />
             ))}
           {activeTab === "third" &&
             AwardsandHonors.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <CaruselCard key={index} {...project} />
             ))}
         </div>
       </div>
       <img
         className="absolute right-0 bottom-0 transform translate-x-1/2 -translate-y-1/2"
-        src={colorSharp2}
+        src={"/other/color-sharp2.png"}
         alt="Background"
       />
     </section>
   );
 };
 
-export default ProjectCarusel;
+export default ProjectCarousel;
