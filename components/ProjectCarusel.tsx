@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import { CaruselCard } from "@/components/CaruselCard";
+import { CaruselCard } from "./CaruselCard";
 
 interface Project {
   title: string;
@@ -10,23 +11,24 @@ interface Project {
 const ProjectCarousel: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("first");
 
+  // Explicitly type the arrays of projects
   const projects: Project[] = [
     {
       title: "Simulating Polymer Dynamics with Monte Carlo",
       description:
         "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
-      imgUrl: "/projects/biophysics_polymer_simulation.png",
+      imgUrl: "projects/biophysics_polymer_simulation.png",
     },
     {
       title: "Creating a Transformer from Scratch",
       description:
         "A mathematical implementation of a transformer neural network from scratch",
-      imgUrl: "/projects/industrial_mathematics_transformer.png",
+      imgUrl: "projects/industrial_mathematics_transformer.png",
     },
     {
       title: "Stock IOS App",
       description: "IOS App oriented around dividend investing",
-      imgUrl: "/projects/dividendapp.png",
+      imgUrl: "projects/dividendapp.png",
     },
   ];
 
@@ -71,42 +73,42 @@ const ProjectCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-20" id="project">
+    <section className="relative py-20 bg-black text-white" id="project">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold">Projects and Awards</h2>
-          <p className="mt-4 text-lg">
+          <p className="text-gray-400 text-lg mx-auto leading-relaxed">
             Here is a brief overview of my projects
             <br />
             For more details click on "Projects" on top of the page!
           </p>
         </div>
-        <div className="flex justify-center mb-5">
+        <div className="flex justify-center space-x-4 mb-5">
           <button
-            className={`mx-2 py-2 px-4 ${
+            className={`py-2 px-4 rounded-full transition-all duration-300 ease-in-out ${
               activeTab === "first"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800"
+                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                : "bg-transparent text-white hover:bg-white hover:text-black border border-white"
             }`}
             onClick={() => setActiveTab("first")}
           >
             Programming
           </button>
           <button
-            className={`mx-2 py-2 px-4 ${
+            className={`py-2 px-4 rounded-full transition-all duration-300 ease-in-out ${
               activeTab === "second"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800"
+                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                : "bg-transparent text-white hover:bg-white hover:text-black border border-white"
             }`}
             onClick={() => setActiveTab("second")}
           >
             Random
           </button>
           <button
-            className={`mx-2 py-2 px-4 ${
+            className={`py-2 px-4 rounded-full transition-all duration-300 ease-in-out ${
               activeTab === "third"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800"
+                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                : "bg-transparent text-white hover:bg-white hover:text-black border border-white"
             }`}
             onClick={() => setActiveTab("third")}
           >
@@ -129,8 +131,8 @@ const ProjectCarousel: React.FC = () => {
         </div>
       </div>
       <img
-        className="absolute right-0 bottom-0 transform translate-x-1/2 -translate-y-1/2"
-        src={"/other/color-sharp2.png"}
+        className="absolute right-0 bottom-0 transform translate-x-1/2 -translate-y-1/2 w-1/3"
+        src="/other/color-sharp2.png"
         alt="Background"
       />
     </section>
