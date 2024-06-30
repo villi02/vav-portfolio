@@ -15,18 +15,18 @@ const ProjectCarousel: React.FC = () => {
       title: "Simulating Polymer Dynamics with Monte Carlo",
       description:
         "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
-      imgUrl: "/assets/img/projects/biophysics_polymer_simulation.png",
+      imgUrl: "/projects/biophysics_polymer_simulation.png",
     },
     {
       title: "Creating a Transformer from Scratch",
       description:
         "A mathematical implementation of a transformer neural network from scratch",
-      imgUrl: "/assets/img/projects/industrial_mathematics_transformer.png",
+      imgUrl: "/projects/industrial_mathematics_transformer.png",
     },
     {
       title: "Stock IOS App",
       description: "IOS App oriented around dividend investing",
-      imgUrl: "/assets/img/StockAppImg/demopic.png",
+      imgUrl: "/projects/dividendapp.png",
     },
   ];
 
