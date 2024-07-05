@@ -15,10 +15,10 @@ export const SearchSection: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('/api/Search', {
-        method: 'POST',
+      const response = await fetch("/api/Search", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ query: value }),
       });
@@ -34,7 +34,7 @@ export const SearchSection: React.FC = () => {
       history.pushState(null, "", `/?q=${encodeURIComponent(value)}`);
       router.refresh();
     } catch (error: any) {
-      console.error('Error fetching search results:', error);
+      console.error("Error fetching search results:", error);
       setResult(null);
       setError(error.message);
     }
@@ -52,9 +52,6 @@ export const SearchSection: React.FC = () => {
         <h2 className="text-4xl font-bold mb-4">Search</h2>
         <p className="text-gray-400 text-lg mb-8">
           This is a RAG chatbot, given information about me, give it a try!
-        </p>
-        <p className="text-gray-400 text-sm mb-8">
-          NB! The bot may hallucinate and take some time to answer
         </p>
         <div className="flex flex-col items-center w-full p-3 gap-4 my-3">
           <form
@@ -77,6 +74,9 @@ export const SearchSection: React.FC = () => {
               </IconButton>
             </div>
           </form>
+          <p className="text-gray-400 text-sm mb-8">
+            NB! The bot may hallucinate and take some time to answer
+          </p>
           {result && (
             <div className="w-full max-w-md p-3 mt-3 bg-zinc-900 text-gray-300 rounded-md">
               {result}
