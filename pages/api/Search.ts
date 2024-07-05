@@ -72,7 +72,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(200).json({ results: [responseText] });
   } catch (error) {
     console.error("Error fetching completions:", error);
-    const errorMessage = error.message || "An error occurred";
+    const errorMessage =
+      error instanceof Error ? error.message : "An error occurred";
     return res.status(500).json({ error: errorMessage });
   }
 };
