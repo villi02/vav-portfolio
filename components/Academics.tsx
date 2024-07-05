@@ -31,7 +31,7 @@ const Academics: React.FC<AcademicsProps> = ({
           My <strong className="text-purple-500">Courses</strong>
         </h1>
         <p className="mb-8">
-          Here are the courses I've taken during University
+          Here are the courses I&apos;ve taken during University
         </p>
         <p className="mb-8">
           NB : Some courses are not part of my degrees, for various reasons

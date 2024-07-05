@@ -18,7 +18,7 @@ export const SearchSection: React.FC = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
-    setResult(event.target.value ? `Result for "${event.target.value}"` : null);
+    setResult(event.target.value ? `"${event.target.value}"` : null);
   };
 
   return (
@@ -26,7 +26,7 @@ export const SearchSection: React.FC = () => {
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4">Search</h2>
         <p className="text-gray-400 text-lg mb-8">
-          Use the search bar below to find specific projects or topics.
+          This is a RAG chatbot, given information about me, give it a try!
         </p>
         <div className="flex flex-col items-center w-full p-3 gap-4 my-3">
           <form

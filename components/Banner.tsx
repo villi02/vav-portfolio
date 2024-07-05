@@ -58,7 +58,7 @@ const Banner: React.FC = () => {
     <div className="flex flex-row items-center justify-between h-screen bg-gradient-to-br from-black via-black to-[#1A001A] p-8 w-full">
       <div className="flex-1 p-8">
         <h1 className="text-6xl font-bold text-white mb-4">
-          Hi, I'm Vilhjalmur
+          Hi, I&#39;m Vilhjalmur
         </h1>
         <h2 className="text-3xl text-gray-300 mb-4">{text}</h2>
         <p className="text-xl text-gray-300 mb-4">
@@ -69,7 +69,7 @@ const Banner: React.FC = () => {
           onClick={handleEmailClick}
           className="flex items-center text-white text-xl cursor-pointer mb-8 transition-transform transform hover:translate-x-2"
         >
-          <span className="mr-2">Let's connect!</span>
+          <span className="mr-2">Let&apos;s connect!</span>
           <FaArrowRight className="text-2xl" />
         </div>
       </div>

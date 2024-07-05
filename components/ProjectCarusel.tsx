@@ -80,7 +80,7 @@ const ProjectCarousel: React.FC = () => {
           <p className="text-gray-400 text-lg mx-auto leading-relaxed">
             Here is a brief overview of my projects
             <br />
-            For more details click on "Projects" on top of the page!
+            For more details click on &quot;Projects&quot; on top of the page!
           </p>
         </div>
         <div className="flex justify-center space-x-4 mb-5">
