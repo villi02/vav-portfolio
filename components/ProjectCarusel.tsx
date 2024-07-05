@@ -8,69 +8,69 @@ interface Project {
   imgUrl: string;
 }
 
+// Explicitly type the arrays of projects
+const projects: Project[] = [
+  {
+    title: "Simulating Polymer Dynamics with Monte Carlo",
+    description:
+      "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
+    imgUrl: "projects/biophysics_polymer_simulation.png",
+  },
+  {
+    title: "Creating a Transformer from Scratch",
+    description:
+      "A mathematical implementation of a transformer neural network from scratch",
+    imgUrl: "projects/industrial_mathematics_transformer.png",
+  },
+  {
+    title: "Stock IOS App",
+    description: "IOS App oriented around dividend investing",
+    imgUrl: "projects/dividendapp.png",
+  },
+];
+
+const creativeProjects: Project[] = [
+  {
+    title: "Podcast on Spotify",
+    description: "A podcast where I interview people I find interesting",
+    imgUrl: "/other/podcastlogo.jpeg",
+  },
+  {
+    title: "Youtube Vlog for parents",
+    description:
+      "A vlog I made so that my parents can see what I'm up to in college",
+    imgUrl: "other/vlogpic.png",
+  },
+  {
+    title: "Top Grear-like race",
+    description:
+      "A race from Bergen to Nordkapp, public transport vs private car",
+    imgUrl: "/timeline/northCape.png",
+  },
+];
+
+const AwardsandHonors: Project[] = [
+  {
+    title: "2nd - Chinese Bridge Competition Norway",
+    description:
+      "Consisted of a speech and talent show. My talent show was a play with Philip Alsager.",
+    imgUrl: "projects/Chinese_bridge_logo.jpg",
+  },
+  {
+    title: "3rd - Chinese Bridge Competition Norway",
+    description: "Consisted of a speech only, due to COVID-19",
+    imgUrl: "/projects/Chinese_bridge_logo.jpg",
+  },
+  {
+    title: "3rd - Hackathon with NASA JPL",
+    description:
+      "Hackathon hosted by Start NTNU at NTNU. Found ways for the EELS-project at JPL to traverse Enceladus - a moon of Saturn. Used software provided by JPL. (ROS, C++, Python)",
+    imgUrl: "/projects/NASAlogo.png",
+  },
+];
+
 const ProjectCarousel: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("first");
-
-  // Explicitly type the arrays of projects
-  const projects: Project[] = [
-    {
-      title: "Simulating Polymer Dynamics with Monte Carlo",
-      description:
-        "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
-      imgUrl: "projects/biophysics_polymer_simulation.png",
-    },
-    {
-      title: "Creating a Transformer from Scratch",
-      description:
-        "A mathematical implementation of a transformer neural network from scratch",
-      imgUrl: "projects/industrial_mathematics_transformer.png",
-    },
-    {
-      title: "Stock IOS App",
-      description: "IOS App oriented around dividend investing",
-      imgUrl: "projects/dividendapp.png",
-    },
-  ];
-
-  const creativeProjects: Project[] = [
-    {
-      title: "Podcast on Spotify",
-      description: "A podcast where I interview people I find interesting",
-      imgUrl: "/other/podcastlogo.jpeg",
-    },
-    {
-      title: "Youtube Vlog for parents",
-      description:
-        "A vlog I made so that my parents can see what I'm up to in college",
-      imgUrl: "other/vlogpic.png",
-    },
-    {
-      title: "Top Grear-like race",
-      description:
-        "A race from Bergen to Nordkapp, public transport vs private car",
-      imgUrl: "/timeline/northCape.png",
-    },
-  ];
-
-  const AwardsandHonors: Project[] = [
-    {
-      title: "2nd - Chinese Bridge Competition Norway",
-      description:
-        "Consisted of a speech and talent show. My talent show was a play with Philip Alsager.",
-      imgUrl: "projects/Chinese_bridge_logo.jpg",
-    },
-    {
-      title: "3rd - Chinese Bridge Competition Norway",
-      description: "Consisted of a speech only, due to COVID-19",
-      imgUrl: "/projects/Chinese_bridge_logo.jpg",
-    },
-    {
-      title: "3rd - Hackathon with NASA JPL",
-      description:
-        "Hackathon hosted by Start NTNU at NTNU. Found ways for the EELS-project at JPL to traverse Enceladus - a moon of Saturn. Used software provided by JPL. (ROS, C++, Python)",
-      imgUrl: "/projects/NASAlogo.png",
-    },
-  ];
 
   return (
     <section className="relative py-20 bg-black text-white" id="project">
