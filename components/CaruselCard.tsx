@@ -20,7 +20,7 @@ export const CaruselCard: React.FC<ProjectCardProps> = ({
           alt={title}
           className="w-full transition-transform duration-500 ease-in-out transform group-hover:scale-110"
         />
-        {/* Adjust opacity to 0 by default and 100 on hover */}
+
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"></div>
         <div className="absolute inset-0 flex items-center justify-center p-4 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
           <div className="text-center text-white">
