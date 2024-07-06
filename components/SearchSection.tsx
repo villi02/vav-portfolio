@@ -56,23 +56,21 @@ export const SearchSection: React.FC = () => {
         <div className="flex flex-col items-center w-full p-3 gap-4 my-3">
           <form
             onSubmit={handleSearch}
-            className="flex justify-center w-full max-w-md"
+            className="flex justify-center w-full max-w-md relative"
           >
-            <div className="relative flex-grow">
-              <input
-                value={value}
-                onChange={handleChange}
-                className="w-full px-5 py-2 bg-zinc-900 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-white focus:bg-black placeholder:text-gray-500"
-                placeholder="Søk..."
-              />
-              <IconButton
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2"
-                style={{ color: "white" }}
-              >
-                <SearchIcon />
-              </IconButton>
-            </div>
+            <input
+              value={value}
+              onChange={handleChange}
+              className="w-full px-5 py-2 bg-zinc-900 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-white focus:bg-black placeholder:text-gray-500"
+              placeholder="Søk..."
+            />
+            <IconButton
+              type="submit"
+              className="absolute right-0 top-0 bottom-0 my-auto"
+              style={{ color: "white" }}
+            >
+              <SearchIcon />
+            </IconButton>
           </form>
           <p className="text-gray-400 text-sm mb-8">
             NB! The bot may hallucinate and take some time to answer
