@@ -11,10 +11,10 @@ const Page: React.FC = () => {
   const [activeResume, setActiveResume] = useState("nonTechnical");
 
   const getButtonClass = (name: string) => {
-    return `px-4 py-2 rounded shadow ${
+    return `py-2 px-4 rounded-full transition-all duration-300 ease-in-out ${
       activeResume === name
-        ? "bg-purple-500 text-white"
-        : "bg-gray-300 text-black"
+        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+        : "bg-transparent text-white hover:bg-white hover:text-black border border-white"
     }`;
   };
 

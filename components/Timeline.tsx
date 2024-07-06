@@ -195,6 +195,14 @@ const Timeline: React.FC = () => {
   >("professional");
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  const getTimelineButtonClass = (name: string) => {
+    return `mr-4 py-2 px-4 rounded-full transition-all duration-300 ease-in-out ${
+      selectedTimeline === name
+        ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+        : "bg-transparent text-white hover:bg-white hover:text-black border border-white"
+    }`;
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -244,21 +252,13 @@ const Timeline: React.FC = () => {
       <div className="flex justify-center mb-8">
         <button
           onClick={() => setSelectedTimeline("professional")}
-          className={`mr-4 px-4 py-2 rounded ${
-            selectedTimeline === "professional"
-              ? "bg-purple-500 text-white"
-              : "bg-gray-200 text-gray-800"
-          }`}
+          className={getTimelineButtonClass("professional")}
         >
           Professional
         </button>
         <button
           onClick={() => setSelectedTimeline("fun")}
-          className={`px-4 py-2 rounded ${
-            selectedTimeline === "fun"
-              ? "bg-purple-500 text-white"
-              : "bg-gray-200 text-gray-800"
-          }`}
+          className={getTimelineButtonClass("fun")}
         >
           Fun
         </button>
