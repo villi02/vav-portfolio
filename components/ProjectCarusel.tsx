@@ -39,7 +39,7 @@ const creativeProjects: Project[] = [
     title: "Youtube Vlog for parents",
     description:
       "A vlog I made so that my parents can see what I'm up to in college",
-    imgUrl: "other/vlogpic.png",
+    imgUrl: "/other/vlogpic.png",
   },
   {
     title: "Top Grear-like race",
@@ -54,7 +54,7 @@ const AwardsandHonors: Project[] = [
     title: "2nd - Chinese Bridge Competition Norway",
     description:
       "Consisted of a speech and talent show. My talent show was a play with Philip Alsager.",
-    imgUrl: "projects/Chinese_bridge_logo.jpg",
+    imgUrl: "/projects/Chinese_bridge_logo.jpg",
   },
   {
     title: "3rd - Chinese Bridge Competition Norway",
