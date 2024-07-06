@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Banner from "@/components/Banner";
 import ProjectCarusel from "@/components/ProjectCarusel";
 import { SearchSection } from "@/components/SearchSection";
@@ -9,7 +9,9 @@ const Page: React.FC = () => {
     <React.StrictMode>
       <div>
         <Banner />
-        <SearchSection />
+        <Suspense fallback={<div>Loading...</div>}>
+          <SearchSection />
+        </Suspense>
         <ProjectCarusel />
       </div>
     </React.StrictMode>
