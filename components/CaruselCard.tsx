@@ -1,5 +1,6 @@
 // CaruselCard.tsx
 import React from "react";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
@@ -15,9 +16,11 @@ export const CaruselCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="w-full sm:w-1/2 md:w-1/3 p-4">
       <div className="relative overflow-hidden shadow-lg rounded-lg mb-6 group">
-        <img
+        <Image
           src={imgUrl}
           alt={title}
+          width={500}
+          height={500}
           className="w-full transition-transform duration-500 ease-in-out transform group-hover:scale-110"
         />
 
