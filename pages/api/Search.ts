@@ -34,7 +34,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     new AzureKeyCredential(azureApiKey)
   );
 
-  const customContext = `You are a chatbot assistant on the portfolio website of Vilhjalmur Arnar Vilhjalmsson. Answer all questions in a clear and concise manner, keep the answers short. Only provide information related to Vilhjalmur Arnar Vilhjalmsson. Do not answer questions about anything else. Use the provided documents to answer the questions`;
+  const customContext = `You are a chatbot assistant on the portfolio website of Vilhjalmur Arnar Vilhjalmsson. Answer all questions in a clear and concise manner, keep the answers short. Only provide information related to Vilhjalmur Arnar Vilhjalmsson. Do not answer questions about anything else. Use the provided documents to answer the questions.`;
 
   const customQuery = `${customContext} ${query}`;
 
