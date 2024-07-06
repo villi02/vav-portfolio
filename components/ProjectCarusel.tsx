@@ -14,18 +14,18 @@ const projects: Project[] = [
     title: "Simulating Polymer Dynamics with Monte Carlo",
     description:
       "Simulating polymer dynamics using Monte Carlo methods, with emphasis on runtime and computation efficiency",
-    imgUrl: "projects/biophysics_polymer_simulation.png",
+    imgUrl: "/projects/biophysics_polymer_simulation.png",
   },
   {
     title: "Creating a Transformer from Scratch",
     description:
       "A mathematical implementation of a transformer neural network from scratch",
-    imgUrl: "projects/industrial_mathematics_transformer.png",
+    imgUrl: "/projects/industrial_mathematics_transformer.png",
   },
   {
     title: "Stock IOS App",
     description: "IOS App oriented around dividend investing",
-    imgUrl: "projects/dividendapp.png",
+    imgUrl: "/projects/dividendapp.png",
   },
 ];
 
