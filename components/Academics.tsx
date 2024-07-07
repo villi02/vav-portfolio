@@ -1,3 +1,4 @@
+// components/Academics.tsx
 import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -25,19 +26,31 @@ const Academics: React.FC<AcademicsProps> = ({
   physicsCourses,
 }) => {
   return (
-    <div className="bg-black text-white min-h-screen p-8">
+    <div
+      style={{
+        backgroundColor: "#000",
+        color: "#fff",
+        minHeight: "100vh",
+        padding: "2rem",
+      }}
+      className="bg-black text-white min-h-screen p-8"
+    >
       <div className="bg-black container mx-auto">
-        <h1 className="text-3xl font-bold mb-4">
-          My <strong className="text-purple-500">Courses</strong>
+        <h1
+          style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}
+          className="text-3xl font-bold mb-4"
+        >
+          My <strong style={{ color: "#6b46c1" }}>Courses</strong>
         </h1>
-        <p className="mb-8">
+        <p style={{ marginBottom: "2rem" }} className="mb-8">
           Here are the courses I&apos;ve taken during University
         </p>
-        <p className="mb-8">
+        <p style={{ marginBottom: "2rem" }} className="mb-8">
           NB : Some courses are not part of my degrees, for various reasons
         </p>
         <div className="bg-black flex flex-col space-y-4">
           <Accordion
+            style={{ backgroundColor: "#000", borderColor: "#333" }}
             className="bg-black border border-gray-900"
             defaultExpanded={true}
           >
@@ -50,7 +63,15 @@ const Academics: React.FC<AcademicsProps> = ({
               }
               className="bg-black"
             >
-              <Typography className="bg-black text-white font-bold text-lg">
+              <Typography
+                style={{
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: "1.125rem",
+                }}
+                className="bg-black text-white font-bold text-lg"
+              >
                 Mathematics Courses
               </Typography>
             </AccordionSummary>
@@ -82,6 +103,7 @@ const Academics: React.FC<AcademicsProps> = ({
             </AccordionDetails>
           </Accordion>
           <Accordion
+            style={{ backgroundColor: "#000", borderColor: "#333" }}
             className="bg-black border border-gray-900"
             defaultExpanded={true}
           >
@@ -94,7 +116,15 @@ const Academics: React.FC<AcademicsProps> = ({
               }
               className="bg-black"
             >
-              <Typography className="bg-black text-white font-bold text-lg">
+              <Typography
+                style={{
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: "1.125rem",
+                }}
+                className="bg-black text-white font-bold text-lg"
+              >
                 Physics Courses
               </Typography>
             </AccordionSummary>
@@ -126,6 +156,7 @@ const Academics: React.FC<AcademicsProps> = ({
             </AccordionDetails>
           </Accordion>
           <Accordion
+            style={{ backgroundColor: "#000", borderColor: "#333" }}
             className="bg-black border border-gray-900"
             defaultExpanded={true}
           >
@@ -137,7 +168,15 @@ const Academics: React.FC<AcademicsProps> = ({
                 />
               }
             >
-              <Typography className="bg-black text-white font-bold text-lg">
+              <Typography
+                style={{
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: "1.125rem",
+                }}
+                className="bg-black text-white font-bold text-lg"
+              >
                 Computer Science Courses
               </Typography>
             </AccordionSummary>
