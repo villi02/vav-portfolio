@@ -4,8 +4,8 @@ import PdfViewer from "@/components/PdfViewer";
 
 const Page: React.FC = () => {
   const resumeLinks: { [key: string]: string } = {
-    nonTechnical: "/NT_resume.pdf",
-    technical: "/NT_resume.pdf",
+    nonTechnical: "/VAV-NT-jul24.pdf",
+    technical: "/VAV-T-jul24.pdf",
   };
 
   const [activeResume, setActiveResume] = useState("nonTechnical");
