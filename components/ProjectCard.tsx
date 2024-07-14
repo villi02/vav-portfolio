@@ -1,8 +1,6 @@
-// components/ProjectCard.tsx
-
-import Image from 'next/image';
-import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import Image from "next/image";
+import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectCardProps {
   title: string;
@@ -12,9 +10,15 @@ interface ProjectCardProps {
   tags: string[];
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, image, description, githubLink, tags }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  image,
+  description,
+  githubLink,
+  tags,
+}) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-black border border-gray-900 flex flex-col">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-black border border-gray-900 transition duration-300 ease-in-out hover:border-white flex flex-col">
       <Image
         className="w-full"
         src={image}
@@ -25,14 +29,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, image, description, gi
       />
       <div className="flex-1 px-6 py-4">
         <div className="font-bold text-xl mb-2 text-white">{title}</div>
-        <p className="text-gray-300 text-base">
-          {description}
-        </p>
+        <p className="text-gray-300 text-base">{description}</p>
       </div>
       <div className="px-6 pt-4 pb-2">
         <div className="flex justify-center mb-4 space-x-2">
           {tags.map((tag, index) => (
-            <span key={index} className="bg-gray-700 text-gray-300 text-xs font-semibold px-2 py-1 rounded">
+            <span
+              key={index}
+              className="bg-gray-700 text-gray-300 text-xs font-semibold px-2 py-1 rounded"
+            >
               {tag}
             </span>
           ))}
