@@ -5,6 +5,13 @@ import Academics from "@/components/Academics";
 const fetchCourses = async () => {
   const csCourses = [
     {
+      title: "Computer Fundamentals",
+      code: "TDT4160",
+      program: "physmatcs",
+      weburl: "https://www.ntnu.edu/studies/courses/TDT4160#tab=omEmnet",
+      ghLink: "https://github.com/villi02/TDT4160-Datamachines",
+    },
+    {
       title: "Introduction to Analog and Digital Electronics",
       code: "TTT4203",
       program: "physmatcs",
