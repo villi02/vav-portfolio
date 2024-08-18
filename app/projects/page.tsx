@@ -101,7 +101,7 @@ const projects = [
 
 const ProjectsPage: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-black text-white">
       <h1 className="text-3xl font-bold mb-4">
         My <strong className="text-purple-500">Projects</strong>
       </h1>

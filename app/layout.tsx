@@ -19,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
-        <main className="w-full pt-20">{children}</main> {/* Add pt-20 here */}
+        <main className="w-full pt-20">{children}</main>
         <Footer />
       </body>
     </html>
