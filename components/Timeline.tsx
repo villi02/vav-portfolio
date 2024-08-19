@@ -114,7 +114,7 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/AstarNews.png",
   },
   {
-    date: "2027-07-01",
+    date: "2026-07-01",
     title: "Graduation",
     description:
       "Expected completion of M.Sc degrees in Computer Science and Mathematics.",
