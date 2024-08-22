@@ -40,7 +40,7 @@ const Academics: React.FC<AcademicsProps> = ({
           style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}
           className="text-3xl font-bold mb-4"
         >
-          My <strong style={{ color: "#6b46c1" }}>Courses</strong>
+          My <strong className="text-purple-500">Courses</strong>
         </h1>
         <p style={{ marginBottom: "2rem" }} className="mb-8">
           Here are the courses I&apos;ve taken during University
