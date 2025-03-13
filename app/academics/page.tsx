@@ -16,7 +16,7 @@ const fetchCourses = async () => {
       code: "TDT4172",
       program: "physmatcs",
       weburl: "https://www.ntnu.edu/studies/courses/TDT4172#tab=omEmnet",
-      ghLink: "https://github.com/villi02/TDT4160-Datamachines",
+      ghLink: "https://github.com/villi02/TDT4172-Introduction-to-Machine-Learning",
     },
     {
       title: "Computer Fundamentals",
