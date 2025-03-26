@@ -183,6 +183,14 @@ const funMilestones: Milestone[] = [
       "Earned my climbing certificate, allowing me to climb in Norway.",
     image: "/timeline/climbing.jpeg",
   },
+
+  {
+    date: "2024",
+    title: "Lived as a farmer for a weekend",
+    description:
+      "Stayed at a farmers house in Lom, where I was allowed to observe and take part in numerous activites like milking cows.",
+    image: "/timeline/farming_pic.jpeg",
+  },
 ];
 
 // make the arrays reverse chronological
