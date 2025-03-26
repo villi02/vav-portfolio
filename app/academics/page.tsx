@@ -75,6 +75,15 @@ const fetchCourses = async () => {
 
   const mathCourses = [
     {
+      title: "Stochastic Modeling",
+      code: "TMA4265",
+      program: "physmatcs",
+      weburl: "https://www.ntnu.edu/studies/courses/TMA4265/2024#tab=omEmnet",
+      /*ghLink:
+        "https://github.com/villi02/TMA4320-Introduksjon-til-vitenskapelige-beregninger-prosjekter/tree/main",
+        */
+    },
+    {
       title: "Introduction to Scientific Computation",
       code: "TMA4320",
       program: "physmatcs",
