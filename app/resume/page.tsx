@@ -4,7 +4,7 @@ import PdfViewer from "@/components/PdfViewer";
 
 const Page: React.FC = () => {
   const resumeLinks: { [key: string]: string } = {
-    nonTechnical: "/VAV-NT-Sep25.pdf",
+    nonTechnical: "/VilhjalmurArnarVilhjalmsson-CV-Feb25.pdf",
     technical: "/VAV-T-jul24.pdf",
   };
 
