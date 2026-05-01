@@ -107,14 +107,28 @@ const professionalMilestones: Milestone[] = [
     image: "/timeline/NorwAI.jpeg",
   },
   {
-    date: "2024-03 - present",
+    date: "2024-03 - 2024-09",
     title: "Co-founder and Technical officer at A* Consulting",
     description:
       "Featured on the front page of Adresseavisa, secured first three customers within a month.",
     image: "/timeline/AstarNews.png",
   },
   {
-    date: "2026-07-01",
+    date: "2025-06 - 2025-09",
+    title: "Software Engineering Intern at Microsoft",
+    description:
+      "Developed a telemetry dashboard for internal development workflows.",
+  },
+
+  {
+    date: "2026-06 - 2026-08",
+    title: "AI infrastructure at Norges Bank Investment Management (NBIM)",
+    description:
+      "Will be working in the Fund Valuation Team",
+  },
+
+  {
+    date: "2027-07-01",
     title: "Graduation",
     description:
       "Expected completion of M.Sc degrees in Computer Science and Mathematics.",
@@ -190,6 +204,20 @@ const funMilestones: Milestone[] = [
     description:
       "Stayed at a farmers house in Lom, where I was allowed to observe and take part in numerous activites like milking cows.",
     image: "/timeline/farming_pic.jpeg",
+  },
+
+  {
+    date: "2025",
+    title: "Moved to Beijing for an exchange year at Tsinghua University",
+    description:
+    "Moved to Beijing, where I did an exchange year at the Institute for Interdisiplinary Information Sciences, Tsinghua University. I focused on coursework in Quantum Computation, Statistics, AI. Outside of class I joined clubs like Brazilian Jiu Jitsu and the football team, and I travelled all over China, Including Harbin, Shenyang, Xi'an, Chengdu, Chongqing, Hainan, HongKong."
+  },
+
+  {
+    date: "2026",
+    title: "Went to my first Formula 1 Race",
+    description:
+    "During my exchange year I travelled to Suzuka to view my first Formua 1 race in person, I had amazing Grandstand A seatc along the main straight looking straight into the garage of Mclaren and Mercedes. This was definently a bucket list item, and hopefully this is the first of many."
   },
 ];
 
