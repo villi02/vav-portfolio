@@ -118,13 +118,14 @@ const professionalMilestones: Milestone[] = [
     title: "Software Engineering Intern at Microsoft",
     description:
       "Developed a telemetry dashboard for internal development workflows.",
+    image: "/timeline/microsoft_internship.jpeg",
   },
 
   {
     date: "2026-06 - 2026-08",
     title: "AI infrastructure at Norges Bank Investment Management (NBIM)",
-    description:
-      "Will be working in the Fund Valuation Team",
+    description: "Will be working in the Fund Valuation Team",
+    image: "/timeline/nbim_internship.jpeg",
   },
 
   {
@@ -210,14 +211,16 @@ const funMilestones: Milestone[] = [
     date: "2025",
     title: "Moved to Beijing for an exchange year at Tsinghua University",
     description:
-    "Moved to Beijing, where I did an exchange year at the Institute for Interdisiplinary Information Sciences, Tsinghua University. I focused on coursework in Quantum Computation, Statistics, AI. Outside of class I joined clubs like Brazilian Jiu Jitsu and the football team, and I travelled all over China, Including Harbin, Shenyang, Xi'an, Chengdu, Chongqing, Hainan, HongKong."
+      "Moved to Beijing, where I did an exchange year at the Institute for Interdisiplinary Information Sciences, Tsinghua University. I focused on coursework in Quantum Computation, Statistics, AI. Outside of class I joined clubs like Brazilian Jiu Jitsu and the football team, and I travelled all over China, Including Harbin, Shenyang, Xi'an, Chengdu, Chongqing, Hainan, HongKong.",
+    image: "/timeline/Tsinghua_Lecture.png",
   },
 
   {
     date: "2026",
     title: "Went to my first Formula 1 Race",
     description:
-    "During my exchange year I travelled to Suzuka to view my first Formua 1 race in person, I had amazing Grandstand A seatc along the main straight looking straight into the garage of Mclaren and Mercedes. This was definently a bucket list item, and hopefully this is the first of many."
+      "During my exchange year I travelled to Suzuka to view my first Formua 1 race in person, I had amazing Grandstand A seatc along the main straight looking straight into the garage of Mclaren and Mercedes. This was definently a bucket list item, and hopefully this is the first of many.",
+    image: "/timeline/Suzuka_Race26.png",
   },
 ];
 
@@ -254,7 +257,7 @@ const Timeline: React.FC = () => {
         root: null,
         rootMargin: "0px",
         threshold: 0.1,
-      }
+      },
     );
 
     if (elementsRef.current) {
