@@ -125,7 +125,7 @@ const professionalMilestones: Milestone[] = [
     date: "2026-06 - 2026-08",
     title: "AI infrastructure at Norges Bank Investment Management (NBIM)",
     description: "Will be working in the Fund Valuation Team",
-    image: "/timeline/nbim_internship.jpeg",
+    image: "/timeline/NBIM_Singapore.png",
   },
 
   {
