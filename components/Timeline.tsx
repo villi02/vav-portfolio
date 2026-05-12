@@ -2,22 +2,50 @@
 import React, { useEffect, useRef, useState } from "react";
 
 interface Milestone {
-  date: string;
+  start: string; // ISO: "YYYY", "YYYY-MM", or "YYYY-MM-DD"
+  end?: string; // ISO or "present"
   title: string;
   description: string;
   image?: string;
 }
 
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+function formatDate(iso: string): string {
+  if (iso === "present") return "Present";
+  const [year, month] = iso.split("-");
+  if (!month) return year;
+  return `${MONTHS[parseInt(month, 10) - 1]} ${year}`;
+}
+
+function formatRange(start: string, end?: string): string {
+  if (!end) return formatDate(start);
+  return `${formatDate(start)} – ${formatDate(end)}`;
+}
+
 const professionalMilestones: Milestone[] = [
   {
-    date: "2016",
+    start: "2016",
     title: "Started my first company",
     description:
       "Served as the CFO and co-founder of a startup focused on selling iced tea; we sold our products in the school cafeteria. The company was called Fresh Ice Tea",
   },
 
   {
-    date: "2019",
+    start: "2019",
     title: "2nd Prize Chinese Bridge Competition in Norway",
     description:
       "Competed in the Chinese Bridge Competition in the High School student class. Received 2nd prize for giving a speech in Chinese and performing a Chinese play as my talent part.",
@@ -25,14 +53,14 @@ const professionalMilestones: Milestone[] = [
   },
 
   {
-    date: "2020",
+    start: "2020",
     title: "3nd Prize Chinese Bridge Competition in Norway",
     description:
       "Competed in the Chinese Bridge Competition in the High School student class. Received 3rd prize for giving a speech in Chinese, the competition was held virtually and without a talent part due to covid.",
   },
 
   {
-    date: "2020",
+    start: "2020",
     title: "Started my second company",
     description:
       "Served as the CFO and co-founder of a startup with an app centered around sustainability.",
@@ -40,7 +68,8 @@ const professionalMilestones: Milestone[] = [
   },
 
   {
-    date: "2020-2021",
+    start: "2020",
+    end: "2021",
     title: "Completed CS50x during my last year of high school",
     description:
       "Completed the Harvard University CS50x course, an introduction to computer science, during my last year of high school.",
@@ -48,73 +77,78 @@ const professionalMilestones: Milestone[] = [
   },
 
   {
-    date: "2021-08-01",
+    start: "2021-08",
     title: "Started University",
     description:
       "Began my M.Sc degrees in Computer Science and Mathematics at NTNU.",
   },
   {
-    date: "2021-08-01",
+    start: "2021-08",
     title: "3rd overall at Spaceport America cup",
     description:
       "Placed 3rd overall in the Spaceport America cup, the world's largest intercollegiate rocket engineering competition. My role was securing funding and partnerships.",
     image: "/timeline/Propulse.JPG",
   },
   {
-    date: "2022-02 - 2024-06",
+    start: "2022-02",
+    end: "2024-06",
     title: "Project Lead at Cogito NTNU",
     description:
       "Led AI projects, including pneumonia detection and time series prediction.",
     image: "/timeline/cogito.jpeg",
   },
   {
-    date: "2022-02-01",
+    start: "2022-02",
     title: "3rd Place at NASA JPL Hackathon",
     description:
       "During my first year, I achieved 3rd place in a hackathon hosted by Start NTNU and NASA JPL. The competition was originally intended for third-year students and above.",
     image: "/timeline/nasa_hackathon.jpeg",
   },
   {
-    date: "2022-02 - 2023-07",
+    start: "2022-02",
+    end: "2023-07",
     title: "Software Engineer at Favn Software",
     description:
       "Started working part-time during the semester and full-time during the summer",
     image: "/timeline/favn_job.jpeg",
   },
   {
-    date: "2023-09-01",
+    start: "2023-09",
     title: "Finalist at HackMIT 2023",
     description: "Traveled to MIT to attend HackMIT 2023.",
     image: "/timeline/HackMITTeam.jpeg",
   },
   {
-    date: "2023-10-01",
+    start: "2023-10",
     title: "Chief Investment Officer at Høiskolens Chemikerforening",
     description: "Founded and managed an endowment, handling investments.",
   },
   {
-    date: "2024-02-01",
+    start: "2024-02",
     title: "2nd Place in ABB Group Hackathon",
     description:
       "Secured 2nd place in a hackathon organized by ABB Group and NTNU IE-faculty.",
     image: "/timeline/ABB_hackathon.jpeg",
   },
   {
-    date: "2023-07 - present",
+    start: "2023-07",
+    end: "present",
     title: "AI Research Assistant at NorwAI",
     description:
       "Contributed to AI research, paper writing, and data analysis. Initially the focus was with large language models, but later shifted to anomaly detection.",
     image: "/timeline/NorwAI.jpeg",
   },
   {
-    date: "2024-03 - 2024-09",
+    start: "2024-03",
+    end: "2024-09",
     title: "Co-founder and Technical officer at A* Consulting",
     description:
       "Featured on the front page of Adresseavisa, secured first three customers within a month.",
     image: "/timeline/AstarNews.png",
   },
   {
-    date: "2025-06 - 2025-09",
+    start: "2025-06",
+    end: "2025-09",
     title: "Software Engineering Intern at Microsoft",
     description:
       "Developed a telemetry dashboard for internal development workflows.",
@@ -122,14 +156,15 @@ const professionalMilestones: Milestone[] = [
   },
 
   {
-    date: "2026-06 - 2026-08",
+    start: "2026-06",
+    end: "2026-08",
     title: "AI Engineer intern at Norges Bank Investment Management (NBIM)",
     description: "Will be working in the Fund Valuation Team",
     image: "/timeline/NBIM_Singapore.png",
   },
 
   {
-    date: "2027-07-01",
+    start: "2027-07",
     title: "Graduation",
     description:
       "Expected completion of M.Sc degrees in Computer Science and Mathematics.",
@@ -138,7 +173,7 @@ const professionalMilestones: Milestone[] = [
 
 const funMilestones: Milestone[] = [
   {
-    date: "2018",
+    start: "2018",
     title: "Hosted High School Prom",
     description:
       "Served on the committee to orchestrate the middle school prom, also hosted the event, including having the main speech.",
@@ -146,7 +181,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2019",
+    start: "2019",
     title: "Learned to do backflips on the ground",
     description:
       "Taught myself to do backflips in my backyard. NB I stopped doing this in 2021",
@@ -154,14 +189,14 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2019",
+    start: "2019",
     title: "Earned my diver’s certificate",
     description: "Earned my diver’s certificate, Padi Open Water Diver",
     image: "/timeline/Diving.jpeg",
   },
 
   {
-    date: "2020",
+    start: "2020",
     title: "Top Gear-like race to Nordkapp",
     description:
       "Raced to Nordkapp with friends in a Top Gear-like adventure. Where I only used public transportation going from Bergen to Nordkapp. Appeared in the newspaper for this adventure.",
@@ -169,14 +204,14 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2021",
+    start: "2021",
     title: "Hosted High School Graduation",
     description: "Co-Hosted the high school graduation ceremony.",
     image: "/timeline/hostHighSchool.JPG",
   },
 
   {
-    date: "2021",
+    start: "2021",
     title: "Volunteered at UKA 21",
     description:
       "As a volunteer waiter and bartender during UKA21's exclusive dinner parties, I served premium food and beverages, contributing to the festival's estimated 6 million NOK in revenue.",
@@ -184,7 +219,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2022",
+    start: "2022",
     title: "Launched a Rocket at Andøya Space Center",
     description:
       "As part of the Space Technology II course, I led a team in successfully launching a rocket at Andøya Space Center. In addition to my role as Launch Director, I was also responsible for the rocket's Inertial Measurement Unit (IMU).",
@@ -192,7 +227,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2023",
+    start: "2023",
     title: "Earned my Climbing Certificate",
     description:
       "Earned my climbing certificate, allowing me to climb in Norway.",
@@ -200,7 +235,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2024",
+    start: "2024",
     title: "Lived as a farmer for a weekend",
     description:
       "Stayed at a farmers house in Lom, where I was allowed to observe and take part in numerous activites like milking cows.",
@@ -208,7 +243,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2025",
+    start: "2025",
     title: "Moved to Beijing for an exchange year at Tsinghua University",
     description:
       "Moved to Beijing, where I did an exchange year at the Institute for Interdisiplinary Information Sciences, Tsinghua University. I focused on coursework in Quantum Computation, Statistics, AI. Outside of class I joined clubs like Brazilian Jiu Jitsu and the football team, and I travelled all over China, Including Harbin, Shenyang, Xi'an, Chengdu, Chongqing, Hainan, HongKong.",
@@ -216,7 +251,7 @@ const funMilestones: Milestone[] = [
   },
 
   {
-    date: "2026",
+    start: "2026",
     title: "Went to my first Formula 1 Race",
     description:
       "During my exchange year I travelled to Suzuka to view my first Formua 1 race in person, I had amazing Grandstand A seatc along the main straight looking straight into the garage of Mclaren and Mercedes. This was definently a bucket list item, and hopefully this is the first of many.",
@@ -319,8 +354,11 @@ const Timeline: React.FC = () => {
                     <h3 className="text-lg font-bold text-white">
                       {milestone.title}
                     </h3>
-                    <time className="block text-sm font-normal text-gray-400">
-                      {milestone.date}
+                    <time
+                      dateTime={milestone.start}
+                      className="block text-sm font-normal text-gray-400"
+                    >
+                      {formatRange(milestone.start, milestone.end)}
                     </time>
                     <p className="text-base font-normal text-gray-500">
                       {milestone.description}
@@ -346,8 +384,11 @@ const Timeline: React.FC = () => {
                     <h3 className="text-lg font-bold text-white">
                       {milestone.title}
                     </h3>
-                    <time className="block text-sm font-normal text-gray-400">
-                      {milestone.date}
+                    <time
+                      dateTime={milestone.start}
+                      className="block text-sm font-normal text-gray-400"
+                    >
+                      {formatRange(milestone.start, milestone.end)}
                     </time>
                     <p className="text-base font-normal text-gray-500">
                       {milestone.description}
