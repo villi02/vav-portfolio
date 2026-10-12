@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import ResponsiveViewer from "@/components/ResponsiveViewer";
 
 const Page: React.FC = () => {
-  const resumeLinkPdf = "VilhjalmurArnarVilhjalmsson-CV-Feb25.pdf";
-  const resumeLinkImg = "VilhjalmurArnarVilhjalmsson-CV-Feb25.png";
+  const resumeLinkPdf = "/VilhjalmurAVilhjalmsson_Oct26.pdf";
+  const resumeLinkImg = "/VilhjalmurAVilhjalmsson_Oct26.png";
 
   return (
     <div className="container mx-auto p-4">
