@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import ProjectCard from "@/components/ProjectCard";
 import LiveProjects from "@/components/LiveProjects";
+import FinancialEmpireCard from "@/components/FinancialEmpireCard";
 import type { Stats } from "@/components/ProjectMetrics";
 import { archivedProjects } from "@/data/project-archive";
 import { getFallbackStats } from "@/lib/project-stats";
 import "./projects.css";
+import "./financial-empire/game.css";
 
 export const metadata: Metadata = { title: "Projects | VAV", description: "Independent student tools, experiments, and selected projects by Vilhjalmur Arnar Vilhjalmsson." };
 export default function ProjectsPage() {
@@ -21,6 +23,7 @@ export default function ProjectsPage() {
       <LiveProjects initialStats={getFallbackStats() as Stats} />
       <p className="metrics-explainer">Visitors are measured by Google Analytics. Saved schedules are a measure of usage, not unique people. Counts marked “+” are rounded-down snapshots.</p>
     </section>
+    <FinancialEmpireCard />
     <section className="project-archive" aria-labelledby="archive-heading">
       <div className="section-heading"><div><span className="section-eyebrow">MORE EXPLORATIONS</span><h2 id="archive-heading">The project archive<span className="section-count">{archivedProjects.length}</span></h2></div><p>Coursework, collaborations, and side projects.</p></div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{archivedProjects.map(project => <ProjectCard key={project.title} {...project} />)}</div>

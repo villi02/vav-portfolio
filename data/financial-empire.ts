@@ -1,0 +1,48 @@
+// Portfolio copy only. Keep game source, design documents and internal links out of this file.
+export const financialEmpire = {
+  name: "Financial Empire",
+  description: "Build a hedge fund from the office floor up. A 3D management game about people, research, and the decisions that turn a small firm into a lasting institution.",
+  stage: "Playable prototype · pre-production",
+  period: "September 2026–present",
+  context: "",
+  ai: "",
+  stack: ["Godot 4", "C#", ".NET 8", "3D", "Deterministic simulation", "JSON content"],
+  tour: [
+    {
+      title: "Start with a room. Build a firm.",
+      label: "The office",
+      image: "/projects/financial-empire/office.png",
+      alt: "An isometric office with a small team working at desks and a paused simulation clock.",
+      capture: "October 2026 development build",
+      description: "You play the CEO. Place desks, hire specialists, and bring research, trading, engineering, and operations together. Pause or speed up the simulation as your office comes to life.",
+      decision: "Who does your firm need next — another researcher, or someone to put their ideas to work?",
+    },
+    {
+      title: "Turn research into a strategy.",
+      label: "Research & trading",
+      image: "/projects/financial-empire/strategies.png",
+      alt: "The strategy panel showing research, capital allocation, staff assignments, and the remaining edge of a live strategy.",
+      capture: "September 2026 development build · earlier interface",
+      description: "Research an idea, assign a team, and choose how much fund capital to commit. A strategy’s advantage fades over time, so the next generation needs to be in development before the current one runs out of steam.",
+      decision: "Commit more capital today, or invest in the research that could carry you tomorrow?",
+    },
+    {
+      title: "Make growth sustainable.",
+      label: "People & space",
+      image: "/projects/financial-empire/amenities.png",
+      alt: "The office expanded with a lounge, snack bar, meeting table, and table tennis alongside staff workstations.",
+      capture: "October 2026 development build",
+      description: "Your workplace is part of the simulation. Add amenities, improve working conditions, and expand when the firm can support the cost. More space and better facilities also bring larger bills.",
+      decision: "Is it time to improve the office, or should you preserve the company’s cash?",
+    },
+    {
+      title: "Earn the next month.",
+      label: "The bigger picture",
+      image: "/projects/financial-empire/fund.png",
+      alt: "The Almanac fund report showing monthly performance, investor subscriptions and redemptions, and fees paid.",
+      capture: "September 2026 development build · earlier interface",
+      description: "Fund capital and company cash are separate. At month-end, fees support the business while investors respond to performance by adding or withdrawing money. The Almanac helps you see how those decisions add up.",
+      decision: "Can the organisation you are building survive beyond one successful strategy?",
+    },
+  ],
+} as const;
