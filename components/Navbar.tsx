@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Disclosure,
   DisclosureButton,
@@ -12,21 +14,29 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 interface NavigationItem {
   name: string;
   href: string;
-  current: boolean;
 }
 
 const navigation: NavigationItem[] = [
-  { name: "Home", href: "/", current: false },
-  { name: "Resume", href: "/resume", current: false },
-  { name: "Projects", href: "/projects", current: false },
-  { name: "Milestones", href: "/story", current: false },
+  { name: "Home", href: "/" },
+  { name: "Resume", href: "/resume" },
+  { name: "Projects", href: "/projects" },
+  { name: "Milestones", href: "/story" },
 ];
+
+const activeLink = "bg-[#b5a0ff]/10 text-[#d2c5ff] ring-1 ring-inset ring-[#b5a0ff]/25";
+const inactiveLink = "text-gray-300 hover:bg-white/5 hover:text-white";
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
 const Navbar: React.FC = () => {
+  const pathname = usePathname();
+  const links = navigation.map((item) => ({
+    ...item,
+    current: pathname === item.href || (item.href !== "/" && Boolean(pathname?.startsWith(`${item.href}/`))),
+  }));
+
   return (
     <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-50 bg-black">
       {({ open }) => (
@@ -45,26 +55,24 @@ const Navbar: React.FC = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <a href="/" className="text-white font-bold text-2xl">
+                  <Link href="/" className="text-white font-bold text-2xl">
                     VAV
-                  </a>
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
+                    {links.map((item) => (
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-4 py-3 text-md font-medium"
+                          item.current ? activeLink : inactiveLink,
+                          "rounded-md px-4 py-3 text-md font-medium transition-colors duration-200 motion-reduce:transition-none"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -88,16 +96,14 @@ const Navbar: React.FC = () => {
 
           <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {links.map((item) => (
                 <DisclosureButton
                   key={item.name}
-                  as="a"
+                  as={Link}
                   href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-4 py-3 text-base font-medium"
+                    item.current ? activeLink : inactiveLink,
+                    "block rounded-md px-4 py-3 text-base font-medium transition-colors duration-200 motion-reduce:transition-none"
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >
