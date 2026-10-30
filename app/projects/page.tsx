@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageTitle from "@/components/PageTitle";
 import ProjectCard from "@/components/ProjectCard";
 import LiveProjects from "@/components/LiveProjects";
 import FinancialEmpireCard from "@/components/FinancialEmpireCard";
@@ -13,7 +14,7 @@ export default function ProjectsPage() {
   return <div className="projects-page">
     <header className="projects-intro">
       <div className="section-eyebrow"><span />SELECTED WORK</div>
-      <h1>My <span>projects</span></h1>
+      <PageTitle subject="projects" />
       <p>Some projects I&apos;ve shipped.</p>
       <a href="#live-projects" className="intro-link">Explore the projects <span aria-hidden="true">↓</span></a>
       <div className="intro-decoration" aria-hidden="true">&lt;/&gt;</div>

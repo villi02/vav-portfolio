@@ -1,5 +1,6 @@
 // components/Timeline.tsx
 import React, { useEffect, useRef, useState } from "react";
+import PageTitle from "@/components/PageTitle";
 
 interface Milestone {
   start: string; // ISO: "YYYY", "YYYY-MM", or "YYYY-MM-DD"
@@ -317,9 +318,7 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">
-        My <strong className="text-purple-500">Milestones</strong>
-      </h1>
+      <PageTitle subject="milestones" />
       <p className="mb-8">
         My professional and personal achievements and highlights
       </p>

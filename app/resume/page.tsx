@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import PageTitle from "@/components/PageTitle";
 import ResponsiveViewer from "@/components/ResponsiveViewer";
 
 const Page: React.FC = () => {
@@ -8,9 +9,7 @@ const Page: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">
-        My <strong className="text-purple-500">Resume</strong>
-      </h1>
+      <PageTitle subject="resume" />
       <ResponsiveViewer imgLink={resumeLinkImg} pdfLink={resumeLinkPdf} />
     </div>
   );
