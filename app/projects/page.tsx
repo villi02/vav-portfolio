@@ -13,13 +13,13 @@ export default function ProjectsPage() {
   return <div className="projects-page">
     <header className="projects-intro">
       <div className="section-eyebrow"><span />SELECTED WORK</div>
-      <h1>Ideas, built<br /><span>for the real world.</span></h1>
-      <p>A collection of things I’ve built — from tools for everyday student life to experiments in code, data, and AI.</p>
+      <h1>My <span>projects</span></h1>
+      <p>Some projects I&apos;ve shipped.</p>
       <a href="#live-projects" className="intro-link">Explore the projects <span aria-hidden="true">↓</span></a>
       <div className="intro-decoration" aria-hidden="true">&lt;/&gt;</div>
     </header>
     <section id="live-projects" aria-labelledby="live-heading">
-      <div className="section-heading"><div><span className="section-eyebrow">BUILT TO BE USED</span><h2 id="live-heading">Out in the world<span className="section-count">02</span></h2></div><p>Two independent tools for NTNU students.</p></div>
+      <div className="section-heading"><div><h2 id="live-heading">Out in the world<span className="section-count">02</span></h2></div><p>Two independent tools for NTNU students.</p></div>
       <LiveProjects initialStats={getFallbackStats() as Stats} />
       <p className="metrics-explainer">Visitors are measured by Google Analytics. Saved schedules are a measure of usage, not unique people. Counts marked “+” are rounded-down snapshots.</p>
     </section>
