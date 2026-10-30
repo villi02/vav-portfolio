@@ -1,5 +1,6 @@
 // components/Academics.tsx
 import React from "react";
+import PageTitle from "@/components/PageTitle";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -36,12 +37,7 @@ const Academics: React.FC<AcademicsProps> = ({
       className="bg-black text-white min-h-screen p-8"
     >
       <div className="bg-black container mx-auto">
-        <h1
-          style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}
-          className="text-3xl font-bold mb-4"
-        >
-          My <strong className="text-purple-500">Courses</strong>
-        </h1>
+        <PageTitle subject="courses" />
         <p style={{ marginBottom: "2rem" }} className="mb-8">
           Here are the courses I&apos;ve taken during University
         </p>
