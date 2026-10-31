@@ -2,7 +2,7 @@ export const liveProjects = [
   {
     slug: "ntnu-utveksling",
     name: "NTNU Utveksling",
-    eyebrow: "A WORLD OF POSSIBILITIES",
+    eyebrow: "",
     description: "Making a semester abroad easier to plan. Explore exchange destinations, compare universities, and find courses that fit your degree.",
     url: "https://ntnu-utveksling.no/",
     image: "/projects/ntnu-utveksling.jpg",
@@ -22,7 +22,7 @@ export const liveProjects = [
   {
     slug: "ntnu-timeplan",
     name: "NTNU Timeplan",
-    eyebrow: "A CLEARER STUDENT WEEK",
+    eyebrow: "",
     description: "A simple home for your university timetable. Find courses, organise your week, and take your schedule with you in your favourite calendar.",
     url: "https://ntnu-timeplan.no/",
     image: "/projects/ntnu-timeplan.jpg",
