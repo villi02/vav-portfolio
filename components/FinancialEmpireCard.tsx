@@ -6,7 +6,6 @@ export default function FinancialEmpireCard() {
   return <section className="game-section" aria-labelledby="game-heading">
     <div className="section-heading">
       <div><span className="section-eyebrow">WORK IN PROGRESS</span><h2 id="game-heading">Behind the build<span className="section-count">01</span></h2></div>
-      <p>A look inside a game taking shape.</p>
     </div>
     <article className="game-card">
       <Link className="game-card-image" href="/projects/financial-empire" aria-label="Explore Financial Empire">
